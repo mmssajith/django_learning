@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Notes</title>
+</head>
+
+<body>
+    <h1>These are the notes:</h1>
+    {% for note in all_notes %}
+    <li>
+        <a href="{% url 'note_detail' pk=note.id%}">{{note.title}}</a>
+    </li>
+    {% endfor %}
+</body>
+
+</html>
